@@ -1,0 +1,13 @@
+a = [int(x) for x in open('figna3.txt')]
+count = 0
+max_k = 0
+k = 0
+for i in range (len(a) - 2):
+    if a[i+1] < min (a[i], a[i+2]) or a[i+1] > max (a[i], a[i+2]):
+        k += 1
+        if k == 3:
+            count += 1
+        max_k = max(max_k, k)
+    else:
+        k = 0
+print (count, max_k)
