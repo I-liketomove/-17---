@@ -1,0 +1,9 @@
+a = [int(x) for x in open('17 (1).txt')]
+count = 0
+last = 0
+for i in range (len(a) - 1):
+  if (a[i] + a[i+1]) % 13 == 0:
+    count += 1
+    if count == 5:
+      last = a[i] + a[i+1]
+ print (count, last)
