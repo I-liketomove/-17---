@@ -1,0 +1,8 @@
+a = [int(x) for x in open('17 (2).txt')]
+count = 0
+win = 0
+for i in range (len(a) - 1):
+    if a[i] % 2 == 0 and (a[i] * a[i+1]) % 7 == 0:
+        count += 1
+        win = max(win, a[i] * a[i+1])
+print (count, win)
